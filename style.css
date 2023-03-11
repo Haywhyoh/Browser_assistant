@@ -1,0 +1,10 @@
+.main {
+  margin: auto;
+  display: grid;
+  grid-template: 40px / auto auto auto;
+}
+
+.feature_icon {
+  width: 40px;
+  height: 40px;
+}
