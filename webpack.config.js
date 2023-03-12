@@ -9,7 +9,8 @@ module.exports = {
     
   //This property defines the file path and the file name which will be used for deploying the bundled file
   output:{
-    filename: 'popup.js'
+    path: path.join(__dirname, '/dist'),
+    filename: '[name].js'
   },
     
   //Setup loaders
@@ -24,7 +25,11 @@ module.exports = {
             presets: ["@babel/preset-react", "@babel/preset-env"],
           }
         }
-      }
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
     ]
   },
     

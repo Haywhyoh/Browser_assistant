@@ -32,6 +32,8 @@
     "babel-core": "^4.7.16",
     "babel-loader": "^9.1.2",
     "copy-webpack-plugin": "^11.0.0",
-    "html-webpack-plugin": "^5.5.0"
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1"
   }
 }
