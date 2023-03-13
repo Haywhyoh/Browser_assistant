@@ -1,5 +1,8 @@
+import Nav from '../Navigation/navigation';
 export default function Popup() {
   return (
-    <div></div>
+    <div>    
+      <Nav />
+    </div>
   )
 }
