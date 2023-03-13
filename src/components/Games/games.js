@@ -1,9 +1,10 @@
 import Nav from "../Navigation/navigation"
-export default function Askchatgpt() {
+
+export default function Games() {
   return (
     <div>
       <Nav />
-      <h2>Askchatgpt</h2>
+      <h2>Games</h2>
     </div>
   )
 }
