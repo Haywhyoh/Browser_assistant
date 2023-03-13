@@ -1,0 +1,10 @@
+body {
+  background-color: antiquewhite;
+  width: 200px;
+  height: 200px;
+}
+
+main{
+  display: grid;
+  
+}
