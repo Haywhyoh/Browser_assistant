@@ -4,7 +4,7 @@ export default function Nav() {
   return (
     <div>
       <div>
-      <CustomLink to='/'>Home</CustomLink>
+      <CustomLink to='/' className='active'>Home</CustomLink>
         <CustomLink to='/organizer'>Organizer</CustomLink>
         <CustomLink to='/summarise'>Summarise</CustomLink>
         <CustomLink to='/askchatgpt'>AskChatgpt</CustomLink>
