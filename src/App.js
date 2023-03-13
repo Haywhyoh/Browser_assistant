@@ -11,6 +11,7 @@ function App() {
     <div style={{width: "350px",
                 backgroundColor: "lightblue",
                 height: "500px"}}>
+      <Popup />
       <div>
         <Routes>
           <Route path='/' element={<Popup />} />
@@ -20,11 +21,9 @@ function App() {
           <Route path='/screenshot' element={<Screenshot />} />
           <Route path='/utubevid' element={<Utubevid />} />
           <Route path='/games' element={<Games />} />
-
         </Routes>
       </div>
     </div>
   );
 }
-
 export default App;

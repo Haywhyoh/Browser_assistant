@@ -5,7 +5,7 @@ export default function Popup() {
     <div>    
       <h2>Popup</h2>
       <div>
-      <CustomLink to='/'>Home</CustomLink>
+        <CustomLink to='/'>Home</CustomLink>
         <CustomLink to='/organizer'>Organizer</CustomLink>
         <CustomLink to='/summarise'>Summarise</CustomLink>
         <CustomLink to='/askchatgpt'>AskChatgpt</CustomLink>
