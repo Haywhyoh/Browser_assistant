@@ -4,7 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   //This property defines where the application starts
   entry: {
-    popup: './src/popup/popup.jsx'
+    index: './src/index.js'
   },
     
   //This property defines the file path and the file name which will be used for deploying the bundled file
