@@ -6,6 +6,7 @@ import Organizer from "./components/organizer/organizer";
 import Utubevid from "./components/utubeVid/utubevid";
 import Screenshot from "./components/screenshot/screenshot";
 import Games from './components/Games/games';
+import AddNote from './components/organizer/addNotes';
 function App() {
   return (
     <div style={{width: "350px",
@@ -21,6 +22,7 @@ function App() {
           <Route path='/screenshot' element={<Screenshot />} />
           <Route path='/utubevid' element={<Utubevid />} />
           <Route path='/games' element={<Games />} />
+          <Route path='/add' element={<AddNote />} />
         </Routes>
       </div>
     </div>
