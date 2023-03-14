@@ -1,0 +1,19 @@
+h3{
+  padding: 0px;
+  margin: 0px;
+}
+div{
+  padding: 0px;
+  margin: 0px;
+}
+.excerpt_container{
+  display: flex;
+}
+
+.excerpt{
+  font-size: 12px;
+}
+
+.excerpt_icon{
+  font-size: 24px;
+}
