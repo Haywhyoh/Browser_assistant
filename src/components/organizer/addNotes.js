@@ -31,7 +31,6 @@ function setNewNote() {
     const note = { title, content, "id":key}
     const note_value  = JSON.stringify(note)
     localStorage[key] = note_value;
-    alert("Enter a Title")
   }
 
   alert("Cannot submit empty note")

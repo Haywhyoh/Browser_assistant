@@ -7,6 +7,7 @@ import Screenshot from "./components/screenshot/screenshot";
 import Games from './components/Games/games';
 import AddNote from './components/organizer/addNotes';
 import { NotesContextProvider } from './components/organizer/Ideacontext';
+import EditNote from './components/organizer/editNote';
 function App() {
     return (
     <div style={{width: "350px",
@@ -23,6 +24,8 @@ function App() {
           <Route path='/utubevid' element={<Utubevid />} />
           <Route path='/games' element={<Games />} />
           <Route path='/add' element={<AddNote />} />
+          <Route path='/edit' element={<EditNote />} />
+
         </Routes>
       </div>
     </div>
