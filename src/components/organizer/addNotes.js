@@ -26,9 +26,14 @@ export default function AddNote() {
 function setNewNote() {
   const title = document.querySelector('#note_title').value;
   const content = document.querySelector('#note_value').value;
-  const key = nanoid()
-  const note = { title, content, "id":key}
-  const note_value  = JSON.stringify(note)
-  localStorage[key] = note_value;
-  console.log(note_value)
+  if (title && content) {
+    const key = nanoid()
+    const note = { title, content, "id":key}
+    const note_value  = JSON.stringify(note)
+    localStorage[key] = note_value;
+    alert("Enter a Title")
+  }
+
+  alert("Cannot submit empty note")
+ 
 }
