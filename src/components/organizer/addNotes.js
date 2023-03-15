@@ -17,8 +17,7 @@ export default function AddNote() {
         <label>Write Note: 
         <textarea value={note} onChange={(e) => setNote(e.target.value)} cols={40} rows={15}  id='note_value'/>
         </label>
-        <input type="submit" value="Submit" id='set_note' onClick={setNewNote}/>
-        <Link to={'/organizer'}><button>Back</button></Link> 
+        <Link to={'/organizer'}><input type="submit" value="Submit" id='set_note' onClick={setNewNote}/></Link>
       </form>
     </div>
   )
