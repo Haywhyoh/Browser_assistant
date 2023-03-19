@@ -4,9 +4,7 @@
   "manifest_version": 3,
   "description": "An extension to make your browsing the internet fun and easy",
   "permissions": ["storage"],
-  "background": {
-    "service_worker": "../src/service.js"
-  },
+
   "action": {
     "default_title": "Browser Assistant",
     "default_popup": "index.html",
