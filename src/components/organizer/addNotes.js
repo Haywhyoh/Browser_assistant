@@ -33,6 +33,5 @@ function setNewNote() {
     localStorage[key] = note_value;
   }
 
-  alert("Cannot submit empty note")
  
 }
