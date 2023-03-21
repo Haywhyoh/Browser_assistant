@@ -3,7 +3,7 @@ const { Configuration, OpenAIApi } = require("openai");
 
 export default function Summarise() {
   const configuration = new Configuration({
-    apiKey:'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',
+    apiKey:'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',
     });
   const openai = new OpenAIApi(configuration);
 
@@ -22,18 +22,21 @@ export default function Summarise() {
     });
     const result = completion.data.choices[0].message.content
     return setResult(result);
-    
-    console.log(result)
-  }
+     }
   return (
-    <div>
+    <div id="summarise_container">
       <form onSubmit={handleSubmit} id="text_form">
         <textarea value= {prompt} cols={40} rows={10} id="input-title" onChange={(e) => { setPrompt(e.target.value)}}/>
-        <button type='submit' onClick={() => {const form = document.querySelector('#text_form')
+
+        <button type='submit' onClick={() => {const form = document.querySelector('#text_form');
+                                              const save = document.querySelector("#save_button");
                                               form.style.display = "none";
-                                              getResponse()}}>Submit</button>
+                                              getResponse();
+                                              save.style.display="block";
+                                              }}>Submit</button>
       </form>
       <div>{result}</div>
+      <button id="save_button" style={{display: "none"}}>Save Text</button>
     </div>
   )
 }
