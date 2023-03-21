@@ -1,4 +1,4 @@
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 import Popup from "./components/popup/popup";
 import Summarise from "./components/summarise/summarise";
 import Askchatgpt from "./components/askChatgpt/askChatgpt";
@@ -9,10 +9,8 @@ import AddNote from './components/organizer/addNotes';
 import { NotesContextProvider } from './components/organizer/Ideacontext';
 import EditNote from './components/organizer/editNote';
 function App() {
-    return (
-    <div style={{width: "350px",
-                backgroundColor: "lightblue",
-                height: "500px"}}>
+  return (
+    <div>
       <Popup />
       <div>
         <Routes>

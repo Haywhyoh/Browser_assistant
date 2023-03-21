@@ -1,19 +1,81 @@
-h3{
+h3 {
   padding: 0px;
   margin: 0px;
 }
-div{
+div {
   padding: 0px;
   margin: 0px;
 }
-.excerpt_container{
+.excerpt_container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #e9f8f9;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.excerpt {
+  font-size: 12px;
   display: flex;
 }
 
-.excerpt{
-  font-size: 12px;
+.excerpt_icon {
+  font-size: 18px;
+  margin-left: 0.3rem;
 }
 
-.excerpt_icon{
-  font-size: 24px;
+.excerpt_icon:hover {
+  color: red;
+}
+
+.idea_box_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+button {
+  margin: 1rem 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #537fe7;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #181823;
+}
+
+.note_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+form {
+  padding: 2rem;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #537fe7;
+}
+
+input,
+textarea {
+  border-radius: 0.5rem;
+  border: 1px solid #537fe7;
+  font-size: 1rem;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0.3rem;
 }
