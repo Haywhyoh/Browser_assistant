@@ -1,15 +1,16 @@
 import { useState } from "react";
-
+import{ nanoid } from "nanoid";
 const { Configuration, OpenAIApi } = require("openai");
 
 export default function Summarise() {
+  const neverEver = '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';
+
   const configuration = new Configuration({
-    apiKey:'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',
+    apiKey:neverEver,
   });
   const openai = new OpenAIApi(configuration);
 
   const [prompt, setPrompt] = useState('');
-  const [title,setTitle] = useState('');
   const [result, setResult] = useState('');
 
   function handleSubmit(e) {
@@ -26,7 +27,7 @@ export default function Summarise() {
   return (
     <div id="summarise_container">
       <form onSubmit={handleSubmit} id="text_form">
-        <textarea value= {prompt} cols={40} rows={10} id="input-title" onChange={(e) => { setPrompt(e.target.value)}}/>
+        <textarea value= {prompt} cols={40} rows={10} id="input_title" onChange={(e) => { setPrompt(e.target.value)}}/>
 
         <button type='submit' onClick={() => {const form = document.querySelector('#text_form');
                                               const save = document.querySelector("#save_button");
@@ -36,7 +37,17 @@ export default function Summarise() {
                                               }}>Submit</button>
       </form>
       <div>{result}</div>
-      <button id="save_button" style={{display: "none"}}>Save Chat</button>
+      <button id="save_button" style={{display: "none"}} onClick={() =>{ const title = document.querySelector('#input_title').value
+                                                                          const key = nanoid();
+                                                                          const note = { title, content: result, id: key };
+                                                                          const note_value = JSON.stringify(note);
+                                                                          localStorage[key] = note_value;
+                                                                          alert("Saved Successfully!")
+                                                                        }}>Save Chat</button>
     </div>
   )
+}
+
+function setNewNote(content) {
+ 
 }
