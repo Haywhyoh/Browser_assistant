@@ -2,6 +2,9 @@
 Run the build and use the build version as the extension
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Get ApI Key
+https://platform.openai.com/account/api-keys
+
 ## Available Scripts
 
 In the project directory, you can run:

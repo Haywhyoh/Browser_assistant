@@ -1,15 +1,19 @@
 import { useState } from "react";
+import{ nanoid } from "nanoid";
+import { Link } from "react-router-dom";
+
 
 const { Configuration, OpenAIApi } = require("openai");
 
 export default function Summarise() {
+  const neverEver = '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';
+
   const configuration = new Configuration({
-    apiKey:'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',
+    apiKey:neverEver,
   });
   const openai = new OpenAIApi(configuration);
 
   const [prompt, setPrompt] = useState('');
-  const [title,setTitle] = useState('');
   const [result, setResult] = useState('');
 
   function handleSubmit(e) {
@@ -26,17 +30,31 @@ export default function Summarise() {
   return (
     <div id="summarise_container">
       <form onSubmit={handleSubmit} id="text_form">
-        <textarea value= {prompt} cols={40} rows={10} id="input-title" onChange={(e) => { setPrompt(e.target.value)}}/>
-
+      <label> Ask your question: 
+        <textarea value= {prompt} cols={40} rows={3} id="input_title" onChange={(e) => { setPrompt(e.target.value)}}/>
+      </label>
         <button type='submit' onClick={() => {const form = document.querySelector('#text_form');
                                               const save = document.querySelector("#save_button");
+                                              const back = document.querySelector("#back");
                                               form.style.display = "none";
                                               getResponse();
                                               save.style.display="block";
+                                              back.style.display="block";
+
                                               }}>Submit</button>
       </form>
       <div>{result}</div>
-      <button id="save_button" style={{display: "none"}}>Save Chat</button>
+      <button id="save_button" style={{display: "none"}} onClick={() =>{ const title = document.querySelector('#input_title').value
+                                                                          const key = nanoid();
+                                                                          const note = { title, content: result, id: key };
+                                                                          const note_value = JSON.stringify(note);
+                                                                          localStorage[key] = note_value;
+                                                                          alert("Saved Successfully!")
+                                                                        }}>Save Chat</button>
+      <Link to={"/organizer"}>
+          <button id="back" style={{display: "none"}}>Back</button>
+        </Link>
     </div>
+    
   )
 }
