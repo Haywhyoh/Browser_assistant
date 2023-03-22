@@ -1,16 +1,19 @@
 import { RiDeleteBin6Line, RiEditBoxLine } from "react-icons/ri";
+import { BsChevronExpand } from "react-icons/bs";
 import './organizer.css';
 
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { NotesContext } from "./Ideacontext";
 import EditNote from "./editNote";
 
 export default function Ideabox(props) {
   const { ideas, setIdeas } = useContext(NotesContext);
   const content = props["content"];
-  const excerpt = content.slice(0, 80);
+  const tiny = content.slice(0, 80);
+  const [excerpt, setExcerpt] = useState(tiny);
 
+  const [show, setShow] = useState(false);
   return (
 
     <div className="idea_container">
@@ -19,6 +22,12 @@ export default function Ideabox(props) {
         <div className="excerpt">
           <p>{excerpt}</p>
           <Link to={"/organizer"}>
+            <BsChevronExpand className="excerpt_icon"
+              onClick={( ) => {
+                setShow(!show);
+                show ? setExcerpt(content) : setExcerpt(tiny)
+              }}
+            />
             <RiDeleteBin6Line
               className="excerpt_icon"
               id={props.id}
