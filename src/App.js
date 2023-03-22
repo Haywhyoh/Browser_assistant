@@ -14,7 +14,7 @@ function App() {
       <Popup />
       <div>
         <Routes>
-          <Route path='/' element={<Popup />} />
+          <Route path='/' />
           <Route path='/summarise' element={<Summarise />} />
           <Route path='/askchatgpt' element={<Askchatgpt />} />
           <Route path='/organizer' element={<NotesContextProvider/>}/>
