@@ -1,5 +1,8 @@
 import { useState } from "react";
 import{ nanoid } from "nanoid";
+import { Link } from "react-router-dom";
+
+
 const { Configuration, OpenAIApi } = require("openai");
 
 export default function Summarise() {
@@ -31,9 +34,12 @@ export default function Summarise() {
 
         <button type='submit' onClick={() => {const form = document.querySelector('#text_form');
                                               const save = document.querySelector("#save_button");
+                                              const back = document.querySelector("#back");
                                               form.style.display = "none";
                                               getResponse();
                                               save.style.display="block";
+                                              back.style.display="block";
+
                                               }}>Submit</button>
       </form>
       <div>{result}</div>
@@ -44,10 +50,10 @@ export default function Summarise() {
                                                                           localStorage[key] = note_value;
                                                                           alert("Saved Successfully!")
                                                                         }}>Save Chat</button>
+      <Link to={"/organizer"}>
+          <button id="back" style={{display: "none"}}>Back</button>
+        </Link>
     </div>
+    
   )
-}
-
-function setNewNote(content) {
- 
 }
