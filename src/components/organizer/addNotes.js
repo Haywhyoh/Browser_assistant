@@ -42,10 +42,6 @@ export default function AddNote() {
 
 function setNewNote() {
 
-<<<<<<< HEAD
- 
-}
-=======
   const title = document.querySelector("#note_title").value;
   const content = document.querySelector("#note_value").value;
   const key = nanoid();
@@ -55,4 +51,3 @@ function setNewNote() {
   console.log(note_value);
 }
 
->>>>>>> 95a48ef92bc976cf9460e378a77937430e8d7a83
