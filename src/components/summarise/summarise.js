@@ -6,7 +6,7 @@ const { Configuration, OpenAIApi } = require("openai");
 
 export default function Summarise() {
 
-  const neverEver = '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';
+  const neverEver = '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';
   const configuration = new Configuration({
     apiKey:neverEver,
     });
@@ -31,8 +31,8 @@ export default function Summarise() {
   return (
     <div id="summarise_container">
       <form onSubmit={handleSubmit} id="text_form">
-        <label> Ask your question: 
-        <textarea value= {prompt} cols={40} rows={5} id="input-title" onChange={(e) => { setPrompt(e.target.value)}}/>
+        <label> Summarise your text: 
+        <textarea value= {prompt} cols={40} rows={10} id="input-title" onChange={(e) => { setPrompt(e.target.value)}}/>
         </label>
         <button type='submit' onClick={() => {const form = document.querySelector('#text_form');
                                               const save = document.querySelector("#save_button");
