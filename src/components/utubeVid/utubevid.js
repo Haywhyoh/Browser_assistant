@@ -1,4 +1,6 @@
 import youtube from './request';
+import VideoBox from './videoBox';
+
 import { useState } from "react";
 export default function Utubevid() {
   const [videos, setVideos] = useState([]);
@@ -19,6 +21,11 @@ export default function Utubevid() {
       <input type="text" value={search} id="search_val" onChange={(e) => {setSearch(e.target.value)}}/> 
       <button type='submit' onClick={() =>{const searchVal = document.querySelector("#search_val").value; getVideos(searchVal)} } >Search</button>
      </form>
+     <div>
+      {videos.map((video) => (
+        <VideoBox key={video.etag} {...video} />
+      ))}
+     </div>
 
     </div>
   )
