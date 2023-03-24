@@ -8,7 +8,7 @@ export default function VideoBox(props) {
         <div>
         <Link to={'/watch'} state={{id: id}}> 
             <div><img src={imageUrl} alt={title} /></div>
-            <div>{title}</div>
+            <div>{ title }</div>
         </ Link>
         </div>
 
