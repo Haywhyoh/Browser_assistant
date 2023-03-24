@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 const { Configuration, OpenAIApi } = require("openai");
 
 export default function Summarise() {
-  const neverEver = "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";
+
+  const neverEver = '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';
+
   const configuration = new Configuration({
     apiKey: neverEver,
   });
@@ -21,7 +23,9 @@ export default function Summarise() {
   async function getResponse() {
     const completion = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
-      messages: [{ role: "user", content: `Summarize this text + ${prompt}` }],
+
+      messages: [{role: "user", content: `Summarize this text: ${prompt}`}],
+
     });
     const result = completion.data.choices[0].message.content;
     return setResult(result);
@@ -29,6 +33,7 @@ export default function Summarise() {
   return (
     <div id="summarise_container">
       <form onSubmit={handleSubmit} id="text_form">
+
         <label>
           {" "}
           Summarise your text:
@@ -54,8 +59,13 @@ export default function Summarise() {
         >
           Submit
         </button>
+
       </form>
+      <label> Give a title:
+        <textarea value= {title} style={{display: "none"}} cols={40} rows={1} id="input-title" onChange={(e) => { setTitle(e.target.value)}}/>
+        </label>
       <div>{result}</div>
+
       <button
         id="save_button"
         style={{ display: "none" }}
@@ -72,6 +82,7 @@ export default function Summarise() {
       >
         Save Chat
       </button>
+
       <Link to={"/organizer"}>
         <button id="back" style={{ display: "none" }}>
           Back
