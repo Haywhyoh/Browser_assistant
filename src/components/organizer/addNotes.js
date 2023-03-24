@@ -22,26 +22,23 @@ export default function AddNote() {
           <textarea
             value={note}
             onChange={(e) => setNote(e.target.value)}
-            cols={20}
+            cols={40}
             rows={10}
             id="note_value"
           />
         </label>
-
         <button type="submit" value="Submit" id="set_note" onClick={setNewNote}>
           Save
         </button>
         <Link to={"/organizer"}>
           <button>Back</button>
         </Link>
-
       </form>
     </div>
   );
 }
 
 function setNewNote() {
-
   const title = document.querySelector("#note_title").value;
   const content = document.querySelector("#note_value").value;
   const key = nanoid();
@@ -50,4 +47,3 @@ function setNewNote() {
   localStorage[key] = note_value;
   console.log(note_value);
 }
-

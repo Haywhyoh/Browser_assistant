@@ -1,5 +1,12 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "./popup.css";
+import { HiHome } from "react-icons/hi";
+import { BiNotepad } from "react-icons/bi";
+import { FaGamepad } from "react-icons/fa";
+import { RiScreenshot2Fill } from "react-icons/ri";
+import { FaYoutube } from "react-icons/fa";
+import { BsFillChatSquareTextFill } from "react-icons/bs";
+import { MdSummarize } from "react-icons/md";
 
 export default function Popup() {
   return (
@@ -10,13 +17,34 @@ export default function Popup() {
       </div>
 
       <div className="popup_items">
-        <CustomLink to="/">Home</CustomLink>
-        <CustomLink to="/organizer">Organizer</CustomLink>
-        <CustomLink to="/summarise">Summarise</CustomLink>
-        <CustomLink to="/askchatgpt">AskChatgpt</CustomLink>
-        <CustomLink to="/utubevid">UtubeVid</CustomLink>
-        <CustomLink to="/screenshot">Screenshot</CustomLink>
-        <CustomLink to="/games">Games</CustomLink>
+        <CustomLink to="/" className="tooltip">
+          <HiHome />
+          <span className="tooltiptext">Home</span>
+        </CustomLink>
+        <CustomLink to="/organizer" className="tooltip">
+          <BiNotepad />
+          <span className="tooltiptext">NotePad</span>
+        </CustomLink>
+        <CustomLink to="/summarise" className="tooltip">
+          <MdSummarize />
+          <span className="tooltiptext">Summarise</span>
+        </CustomLink>
+        <CustomLink to="/askchatgpt" className="tooltip">
+          <BsFillChatSquareTextFill />
+          <span className="tooltiptext">AskChatgpt</span>
+        </CustomLink>
+        <CustomLink to="/utubevid" className="tooltip">
+          <FaYoutube />
+          <span className="tooltiptext">UtubeVid</span>
+        </CustomLink>
+        <CustomLink to="/screenshot" className="tooltip">
+          <RiScreenshot2Fill />
+          <span className="tooltiptext">Screenshot</span>
+        </CustomLink>
+        <CustomLink to="/games" className="tooltip">
+          <span className="tooltiptext">Games</span>
+          <FaGamepad />
+        </CustomLink>
       </div>
     </div>
   );
