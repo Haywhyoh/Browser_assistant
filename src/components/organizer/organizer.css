@@ -21,8 +21,9 @@ div {
 }
 
 .excerpt_icon {
-  font-size: 18px;
+  font-size: 0.8rem;
   margin-left: 0.3rem;
+  padding: 0.5rem;
 }
 
 .excerpt_icon:hover {
@@ -38,7 +39,7 @@ div {
 }
 
 button {
-  margin: 1rem 0.5rem;
+  margin: 0.5rem;
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
@@ -67,7 +68,7 @@ form {
 
 label {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #537fe7;
 }
 
@@ -75,7 +76,7 @@ input,
 textarea {
   border-radius: 0.5rem;
   border: 1px solid #537fe7;
-  font-size: 1rem;
+  font-size: 0.6rem;
   margin: 0.5rem 0 1rem 0;
-  padding: 0.3rem;
+  padding: 0.5rem;
 }
