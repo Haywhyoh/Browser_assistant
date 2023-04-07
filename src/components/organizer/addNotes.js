@@ -27,9 +27,12 @@ export default function AddNote() {
             id="note_value"
           />
         </label>
+        <Link to={"/organizer"}>
         <button type="submit" value="Submit" id="set_note" onClick={setNewNote}>
           Save
         </button>
+        </Link>
+        
         <Link to={"/organizer"}>
           <button>Back</button>
         </Link>
