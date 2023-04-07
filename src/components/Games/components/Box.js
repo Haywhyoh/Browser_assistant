@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import "./Box.css";
+import './Box.css';
 
 export const Box = ({ value, onClick }) => {
-  const style = value === "X" ? "box x" : "box o";
+  const style = value === 'X' ? 'box x' : 'box o';
 
   return (
     <button className={style} onClick={onClick}>

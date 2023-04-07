@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-export default function EditNote() {
+export default function EditNote () {
   const location = useLocation();
   const key = location.state.id;
   const idea = localStorage.getItem(key);
@@ -9,7 +9,7 @@ export default function EditNote() {
   const [content, setNote] = useState(parsedIdea.content);
   const [title, setTitle] = useState(parsedIdea.title);
 
-  function handleSubmit(e) {
+  function handleSubmit (e) {
     e.preventDefault();
   }
 
@@ -17,15 +17,15 @@ export default function EditNote() {
     <div>
       <form onSubmit={handleSubmit}>
         <label>
-          Title <br></br>
+          Title <br />
           <input
-            type="text"
+            type='text'
             defaultValue={title}
             onChange={(e) => setTitle(e.target.value)}
-            id="note_title"
+            id='note_title'
           />
-        </label>{" "}
-        <br></br>
+        </label>{' '}
+        <br />
         <label>
           Write Note:
           <textarea
@@ -33,20 +33,20 @@ export default function EditNote() {
             onChange={(e) => setNote(e.target.value)}
             cols={40}
             rows={15}
-            id="note_value"
+            id='note_value'
           />
         </label>
-        <Link to={"/organizer"}>
+        <Link to='/organizer'>
           <button
-            type="submit"
-            value="Submit"
-            id="set_note"
+            type='submit'
+            value='Submit'
+            id='set_note'
             onClick={() => {
-              const title = document.querySelector("#note_title").defaultValue;
+              const title = document.querySelector('#note_title').defaultValue;
               const content =
-                document.querySelector("#note_value").defaultValue;
-              parsedIdea["title"] = title;
-              parsedIdea["content"] = content;
+                document.querySelector('#note_value').defaultValue;
+              parsedIdea.title = title;
+              parsedIdea.content = content;
               localStorage.setItem(key, JSON.stringify(parsedIdea));
             }}
           >

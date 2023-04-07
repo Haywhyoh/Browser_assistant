@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import "./ResetButton.css";
+import './ResetButton.css';
 
 export const ResetButton = ({ resetBoard }) => {
   return (
-    <button className="reset-btn" onClick={resetBoard}>
+    <button className='reset-btn' onClick={resetBoard}>
       Reset
     </button>
   );

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { Board } from "./components/Board";
-import { ResetButton } from "./components/ResetButton";
-import { ScoreBoard } from "./components/ScoreBoard";
-import "./games.css";
+import { Board } from './components/Board';
+import { ResetButton } from './components/ResetButton';
+import { ScoreBoard } from './components/ScoreBoard';
+import './games.css';
 
 const Game = () => {
   const WIN_CONDITIONS = [
@@ -14,7 +14,7 @@ const Game = () => {
     [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6],
+    [2, 4, 6]
   ];
 
   const [xPlaying, setXPlaying] = useState(true);
@@ -26,7 +26,7 @@ const Game = () => {
     // Step 1: Update the board
     const updatedBoard = board.map((value, idx) => {
       if (idx === boxIdx) {
-        return xPlaying ? "X" : "O";
+        return xPlaying ? 'X' : 'O';
       } else {
         return value;
       }
@@ -38,7 +38,7 @@ const Game = () => {
     const winner = checkWinner(updatedBoard);
 
     if (winner) {
-      if (winner === "O") {
+      if (winner === 'O') {
         let { oScore } = scores;
         oScore += 1;
         setScores({ ...scores, oScore });
@@ -71,7 +71,7 @@ const Game = () => {
   };
 
   return (
-    <div className="App">
+    <div className='App'>
       <ScoreBoard scores={scores} xPlaying={xPlaying} />
       <Board board={board} onClick={gameOver ? resetBoard : handleBoxClick} />
       <ResetButton resetBoard={resetBoard} />
