@@ -1,6 +1,14 @@
+# Browser Assistant Preview
+All-in-One Chrome Browser extension
+
+##Quick NotePad
+<img width="365" alt="Screenshot 2023-10-25 at 11 43 12" src="https://github.com/Haywhyoh/Browser_assistant/assets/75112647/a03c16e2-da39-4b8f-83b8-41bbe13a697d">
+
 # Getting Started with Create React App
 Run the build and use the build version as the extension
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
 
 # Get ApI Key
 https://platform.openai.com/account/api-keys
