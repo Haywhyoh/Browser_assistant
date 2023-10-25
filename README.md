@@ -1,10 +1,22 @@
 # Browser Assistant Preview
 All-in-One Chrome Browser extension
 
-##Quick NotePad
+## Quick NotePad
+
 <img width="365" alt="Screenshot 2023-10-25 at 11 43 12" src="https://github.com/Haywhyoh/Browser_assistant/assets/75112647/a03c16e2-da39-4b8f-83b8-41bbe13a697d">
 
-# Getting Started with Create React App
+## AskGPT
+
+<img width="365" alt="Screenshot 2023-10-25 at 11 45 48" src="https://github.com/Haywhyoh/Browser_assistant/assets/75112647/fa1478ca-15c5-447c-bc45-68fa6cb36836">
+
+## Utube
+Quickly Search and Play your favorite Youtube Video from any web page
+
+<img width="362" alt="Screenshot 2023-10-25 at 11 47 19" src="https://github.com/Haywhyoh/Browser_assistant/assets/75112647/cd9a825f-b1c6-496f-9d6d-01142465d538">
+
+
+# Getting Start
+ed with Create React App
 Run the build and use the build version as the extension
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
